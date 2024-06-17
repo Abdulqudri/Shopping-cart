@@ -1,0 +1,23 @@
+ [
+	{
+		"id":1,
+		"name": "Camera",
+		"price": 2500,
+		"imgUrl": "/imgs/camera.jpg"
+	},{
+		"id":2,
+		"name": "Shoe",
+		"price": 500,
+		"imgUrl": "/imgs/shoe.jpg"
+	},{
+		"id":3,
+		"name": "Wristwatch",
+		"price": 1500,
+		"imgUrl":"/imgs/wrist.jpg"
+	},{
+		"id":4,
+		"name": "Car",
+		"price": 7500,
+		"imgUrl": "/imgs/car.jpg"
+	}
+]
