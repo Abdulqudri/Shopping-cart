@@ -8,7 +8,7 @@ import {Card, Button} from "react-bootstrap";
 import {formatCurrency} from "../utils/formatCurrency";
 
 export const StoreItem = ({id, name,price, imgUrl}:StoreItemProps) => {
-	let quantity = 1;
+	let quantity = 0;
 	return (<>
 			<Card className="h-100">
 				<Card.Img variant="top" src={imgUrl} height="200px" style={{ objectFit: "cover"}} />
