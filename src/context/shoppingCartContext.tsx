@@ -36,7 +36,7 @@ export const ShoppingCartProvider = ({children}:ShoppingCartProviderProp ) => {
 							return item;
 						}
 					}
-			}
+			)}
 		})
 	}
 
@@ -52,9 +52,9 @@ export const ShoppingCartProvider = ({children}:ShoppingCartProviderProp ) => {
 							return item;
 						}
 					}
-			}
+			)}
 		}
-	}
+	)}
 
 	const removeItem = (id: number) => {
 		setCartItems(currItems => {
