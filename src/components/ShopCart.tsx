@@ -1,7 +1,8 @@
-import {Offcanvas } from "react-bootstrap";
+import {Offcanvas, Stack } from "react-bootstrap";
+import {CartItem} from "../components/CartItem" ;
 import {useShopCart} from "../context/shoppingCartContext";
 export const ShopCart = ({isOpen}: {isOpen: boolean}) => {
-	const {closeCart, cartQuantity} = useShopCart();
+	const {cartItems, closeCart, cartQuantity} = useShopCart();
 	return(
 		<Offcanvas show={isOpen} onHide={closeCart} placement="end" className="bg-white shadow-sm">
 			<Offcanvas.Header closeButton>
@@ -9,7 +10,15 @@ export const ShopCart = ({isOpen}: {isOpen: boolean}) => {
 			</Offcanvas.Header>
 			<Offcanvas.Body>
 				<h3>Your Cart</h3>
-				{cartQuantity === 0 && (<p>You have no item in your cart</p>)}
+				{cartQuantity === 0 ? (<p>You have no item in your cart</p>): (
+			<Stack gap={3}>
+				{
+					cartItems.map(item => {
+						return <CartItem key={item.id} {...item} />
+					})
+				}
+			</Stack>
+				)}
 			</Offcanvas.Body>
 		</Offcanvas>
 	)
