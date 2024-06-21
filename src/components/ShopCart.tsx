@@ -9,8 +9,7 @@ export const ShopCart = ({isOpen}: {isOpen: boolean}) => {
 				<Offcanvas.Title><h1>Cart</h1></Offcanvas.Title>
 			</Offcanvas.Header>
 			<Offcanvas.Body>
-				<h3>Your Cart</h3>
-				{cartQuantity === 0 ? (<p>You have no item in your cart</p>): (
+				{cartQuantity === 0 ? (<div style={{height:"100%"}} className="d-flex justify-content-center align-items-center"><span>You have no item in your cart</span></div>): (
 			<Stack gap={3}>
 				{
 					cartItems.map(item => {
